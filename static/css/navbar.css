@@ -7,28 +7,28 @@
     text-decoration: none;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    color: black;
-}
-
 .navbar {
     position: absolute;
     padding: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
     align-items: center;
 }
 
 .navbar a {
-    font-size: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 1.075rem;
 }
 
 .navbar .nav-links {
     display: flex;
+    background-color: #2A2D34;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .navbar .nav-links li {
@@ -36,15 +36,25 @@ body {
 }
 
 .navbar .nav-links .active {
-    color: red;
+    color: #F26430;
 }
 
 .navbar .menu-hamburger {
-    width: 35px;
+    width: 40px;
     position: absolute;
-    top: 45px;
+    top: 50px;
     right: 50px;
     display: none;
+}
+
+.navbar .title a {
+    font-weight: 700;
+    color: #B7245C;
+    font-size: 2rem;
+}
+
+.navbar .title a:hover {
+    color: #F26430;
 }
 
 @media screen and (max-width: 900px) {
@@ -54,5 +64,17 @@ body {
 
     .navbar .menu-hamburger {
         display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar .title a {
+        font-size: 1rem;
+    }
+
+    .navbar .menu-hamburger {
+        width: 30px;
+        top: 50px;
+        right: 50px;
     }
 }

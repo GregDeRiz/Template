@@ -1,122 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-header {
+* {
+    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 10%;
-}
-
-header li, a, button {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
-    padding: 9px 25px;
-}
-
-.nav-items {
     list-style: none;
+    text-decoration: none;
 }
 
-.nav-items li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.nav-items li a {
-    position: relative;
-    border: 2px solid #111;
-    transition: all 0.3s ease 0s;
-}
-
-.nav-items li a:before {
-    content: '';
+.navbar {
     position: absolute;
-    top: 6px;
-    left: -2px;
-    width: calc(100% + 4px);
-    height: calc(100% - 12px);
-    background: white;
-    transition: 0.5s ease-in-out;
-    transform: scaleY(1);
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
 }
 
-.nav-items li a:hover:before {
-    transform: scaleY(0);
-}
-
-.nav-items li a:after {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: -2px;
-    height: calc(100% + 4px);
-    width: calc(100% - 12px);
-    background: white;
-    transition: 0.5s ease-in-out;
-    transform: scaleX(1);
-}
-
-.nav-items li a:hover:after {
-    transform: scaleX(0);
-}
-
-.nav-items li a span {
-    position: relative;
-    z-index: 3;
-}
-
-header button {
-    position: relative;
-    border: 2px solid #111;
-    cursor: pointer;
+.navbar a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     color: white;
-    background-color: cyan;
-    transition: all 0.3s ease 0s;
+    font-size: 1.075rem;
 }
 
-header button span {
-    position: relative;
-    z-index: 3;
+.navbar .nav-links {
+    display: flex;
+    background-color: #2A2D34;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-header button:before {
-    content: '';
+.navbar .nav-links li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links .active {
+    color: #F26430;
+}
+
+.navbar .menu-hamburger {
+    width: 40px;
     position: absolute;
-    top: 6px;
-    left: -2px;
-    background: cyan;
-    width: calc(100% + 4px);
-    height: calc(100% - 12px);
-    transition: 0.5s ease-in-out;
-    transform: scaleY(1);
+    top: 50px;
+    right: 50px;
+    display: none;
 }
 
-header button:hover:before {
-    transform: scaleY(0);
+.navbar .title a {
+    font-weight: 700;
+    color: #B7245C;
+    font-size: 2rem;
 }
 
-header button:after {
-    content: '';
-    position: absolute;
-    left: 6px;
-    top: -2px;
-    background: cyan;
-    height: calc(100% + 4px);
-    width: calc(100% - 12px);
-    transition: 0.5s ease-in-out;
-    transform: scaleX(1);
+.navbar .title a:hover {
+    color: #F26430;
 }
 
-header button:hover:after {
-    transform: scaleX(0);
+@media screen and (max-width: 900px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+    }
 }
 
-.active {
-    transform: scaleX(0);
-    transform: scaleY(0);
+@media screen and (max-width: 500px) {
+    .navbar .title a {
+        font-size: 1rem;
+    }
+
+    .navbar .menu-hamburger {
+        width: 30px;
+        top: 50px;
+        right: 50px;
+    }
 }
