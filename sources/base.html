@@ -15,7 +15,7 @@
                 <h1 class="title"><a href="/">GregDeRiz's Blog</a></h1>
                 <ul class="nav-links">
                     <li><a {% if "/" == request.path %}class="active"{% endif %} href="/">Home</a></li>
-                    <li><a {% if "/story/" == request.path %}class="active"{% endif %} href="/story">Story</a></li>
+                    <li><a {% if "/about/" == request.path %}class="active"{% endif %} href="/about">About</a></li>
                     <li><a {% if "/contact/" == request.path %}class="active"{% endif %} href="/contact">Contact</a></li>
                 </ul>
                 <img src="{% static 'img/menu-outline.svg' %}" alt="Menu Hamburger" class="menu-hamburger">
